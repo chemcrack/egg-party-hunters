@@ -1,0 +1,13 @@
+/* 电视端适配：屏幕宽度≥1200px（电视/大屏PC） */
+@media (max-width: 800px) {
+    .egg ul {
+        display: flex;
+    }
+
+    .egg li {
+        /*flex: 0 0 calc((100% - 16px) / 2);*/
+        flex: 0 0 calc((100% - 5px));
+        /* 保持比例（关键：宽高比，示例4:3，可自定义） */
+        aspect-ratio: 4/3;
+    }
+}
