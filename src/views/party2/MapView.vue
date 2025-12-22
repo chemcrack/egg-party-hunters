@@ -180,7 +180,7 @@ const handleMouseUp = () => {
 // 触摸开始（移动端）
 const handleTouchStart = (e: TouchEvent) => {
   // 单指拖拽
-  if (e.touches.length === 1) {
+  if (e.touches.length === 1 && e.touches[0]) {
     isDragging.value = true;
     startX.value = e.touches[0].clientX - imagePosition.value.x;
     startY.value = e.touches[0].clientY - imagePosition.value.y;
@@ -197,7 +197,7 @@ const handleTouchMoveGlobal = (e: TouchEvent) => {
   if (!isDragging.value && e.touches.length !== 2) return;
 
   // 单指拖拽
-  if (e.touches.length === 1) {
+  if (e.touches.length === 1 && e.touches[0]) {
     imagePosition.value.x = e.touches[0].clientX - startX.value;
     imagePosition.value.y = e.touches[0].clientY - startY.value;
   }
@@ -215,11 +215,12 @@ const handleTouchMoveGlobal = (e: TouchEvent) => {
 
 // 计算双指距离
 const getTouchDistance = (e: TouchEvent): number => {
-  const touch1 = e.touches[0];
-  const touch2 = e.touches[1];
-  const dx = touch2.clientX - touch1.clientX;
-  const dy = touch2.clientY - touch1.clientY;
-  return Math.sqrt(dx * dx + dy * dy);
+  if (e.touches.length > 1 && e.touches[0] && e.touches[1]) {
+    const dx = e.touches[1].clientX - e.touches[0].clientX;
+    const dy = e.touches[1].clientY - e.touches[0].clientY;
+    return Math.sqrt(dx * dx + dy * dy);
+  }
+  return 0;
 };
 
 // 组件卸载时清理事件

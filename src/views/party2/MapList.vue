@@ -43,7 +43,7 @@ const formData = {
     if (jsonData.value != null)
       for (let item of jsonData.value) {
         if (item.doorMain.sort == exportType)
-          data.value[0].item.push({url: item.id, ext: item.ext, doorStyle: "left", date: item.date, degree: item.doorMain.degree});
+          data.value[0]?.item.push({url: item.id, ext: item.ext, doorStyle: "left", date: item.date, degree: item.doorMain.degree});
       }
   },
   sideEntrance: function (exportType: string) {
@@ -54,18 +54,20 @@ const formData = {
     if (jsonData.value != null)
       for (let item of jsonData.value) {
         if (item.doorSide.sort == exportType)
-          data.value[0].item.push({url: item.id, ext: item.ext, doorStyle: "right", date: item.date, degree: item.doorSide.degree});
+          data.value[0]?.item.push({url: item.id, ext: item.ext, doorStyle: "right", date: item.date, degree: item.doorSide.degree});
       }
   },
   selectDoor: (v: number) => {
     formData.imageData.value.degree = v;
   },
   imageClick: (groupId: number, id: number) => {
-    const item = data.value[groupId].item[id];
-    let url = urlImage.image + item.url + item.ext;
-    if (imageView.value) {
-      console.log("image");
-      imageView.value.open(url, item.degree + formData.imageData.value.degree, "更新于 " + item.date, urlImage.link + item.url);
+    const item = data.value[groupId]?.item[id];
+    if (item) {
+      let url = urlImage.image + item.url + item.ext;
+      if (imageView.value) {
+        console.log("image");
+        imageView.value.open(url, item.degree + formData.imageData.value.degree, "更新于 " + item.date, urlImage.link + item.url);
+      }
     }
   },
   imageClose: () => {
