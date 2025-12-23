@@ -4,10 +4,12 @@ export interface rowData {
     doorMain: {
         sort: string;
         degree: number;
+        groupId: number;
     },
     doorSide: {
         sort: string;
         degree: number;
+        groupId: number;
     },
     date: string
 }
