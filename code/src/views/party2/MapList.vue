@@ -38,12 +38,14 @@ const formData = {
   mainEntrance: function (exportType: string) {
     formData.imageData.value.show = 1;
     data.value = [
-      {group: "组", item: []}, // 0
+      {group: "其他", item: []}, // 0
+      {group: "挨着红房间", item: []}, // 0
+      {group: "特殊", item: []}, // 0
     ];
     if (jsonData.value != null)
       for (let item of jsonData.value) {
         if (item.doorMain.sort == exportType)
-          data.value[0]?.item.push({url: item.id, ext: item.ext, doorStyle: "left", date: item.date, degree: item.doorMain.degree});
+          data.value[item.doorMain.groupId - 1]?.item.push({url: item.id, ext: item.ext, doorStyle: "left", date: item.date, degree: item.doorMain.degree});
       }
   },
   sideEntrance: function (exportType: string) {
@@ -54,7 +56,7 @@ const formData = {
     if (jsonData.value != null)
       for (let item of jsonData.value) {
         if (item.doorSide.sort == exportType)
-          data.value[0]?.item.push({url: item.id, ext: item.ext, doorStyle: "right", date: item.date, degree: item.doorSide.degree});
+          data.value[item.doorSide.groupId - 1]?.item.push({url: item.id, ext: item.ext, doorStyle: "right", date: item.date, degree: item.doorSide.degree});
       }
   },
   selectDoor: (v: number) => {
