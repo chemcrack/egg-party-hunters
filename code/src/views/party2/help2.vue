@@ -27,7 +27,7 @@ defineExpose({
       <h2>{{ helpData.title }}</h2>
       <div class="content">
         <template v-for="content of helpData.content">
-          <view class="h3">{{ content.topic }}</view>
+          <h3>{{ content.topic }}</h3>
           <template v-for="item of content.body">
             <div v-if="item.t=='text'&&item.v" class="text">{{ item.v }}</div>
             <div v-if="item.t=='style'&&item.v" class="img1" :style="item.v"></div>
@@ -93,6 +93,7 @@ defineExpose({
   font-size: 1.6rem;
   line-height: 2em;
   margin: 0;
+  color: #1FD8FE;
 }
 
 .egg .help h3 {
@@ -119,5 +120,6 @@ defineExpose({
 
 .egg .help .text {
   width: 100%;
+  white-space: pre-line;
 }
 </style>

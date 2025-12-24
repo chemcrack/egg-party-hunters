@@ -27,7 +27,7 @@ const id = route.query.id as string;
 console.log(id);
 
 let data: Ref<Array<{
-  group: string, item: Array<{
+  group: string, color: string; item: Array<{
     url: string, ext: string; doorStyle: string, date: string; degree: number;
   }>
 }>> = ref([]);
@@ -38,9 +38,9 @@ const formData = {
   mainEntrance: function (exportType: string) {
     formData.imageData.value.show = 1;
     data.value = [
-      {group: "其他", item: []}, // 0
-      {group: "挨着红房间", item: []}, // 0
-      {group: "特殊", item: []}, // 0
+      {group: "其他", color: "white", item: []}, // 0
+      {group: "挨着红房间", color: "#32CD32", item: []}, // 0
+      {group: "特殊", color: "#00FFFF", item: []}, // 0
     ];
     if (jsonData.value != null)
       for (let item of jsonData.value) {
@@ -51,7 +51,7 @@ const formData = {
   sideEntrance: function (exportType: string) {
     formData.imageData.value.show = 1;
     data.value = [
-      {group: "组", item: []}, // 0
+      {group: "组", color: "#163141", item: []}, // 0
     ];
     if (jsonData.value != null)
       for (let item of jsonData.value) {
@@ -143,9 +143,10 @@ onMounted(() => {
     </div>
     <div v-if="formData.imageData.value.show>0">{{ formData.info.value }}</div>
     <div v-for="(group,groupId) of data" v-if="formData.imageData.value.show>0">
-      <div class="title">{{ groupId + 1 }}. {{ group.group }}</div>
+      <div class="title" :style="{color:group.color}">{{ groupId + 1 }}. {{ group.group }}</div>
       <ul>
-        <li v-for="(item,index) of group.item" :style="{backgroundImage:`url(${urlImage.thumbnail+item.url}.webp)`,backgroundSize:`200%`,backgroundPosition:`${item.doorStyle} center`,transform:`rotate(${formData.imageData.value.degree}deg)`}"
+        <li v-for="(item,index) of group.item"
+            :style="{borderColor:group.color,backgroundImage:`url(${urlImage.thumbnail+item.url}.webp)`,backgroundSize:`200%`,backgroundPosition:`${item.doorStyle} center`,transform:`rotate(${formData.imageData.value.degree}deg)`}"
             @click="formData.imageClick(groupId,index)">
           <span class="path">{{ item.url }}</span>
         </li>
