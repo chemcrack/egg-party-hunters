@@ -22,3 +22,36 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+
+# ================================================
+# 手动添加的忽略文件和文件夹
+# ================================================
+/src/chem-server-springGradle/plugins
+# visual stuido 生成目录
+.vs/
+.vscode/
+obj/
+bin/
+obj/*
+bin/*
+Debug/
+# idea 临时文件 目录
+.idea/
+.gradle/
+# mac 临时文件夹
+.DS_Store/
+.DS_Store
+# android studio 临时文件夹
+# npm 生成目录
+node_modules/
+node_modules/*
+/dist
+dist/
+#java生成文件夹
+target/
+build/
+gradle/
+# office 临时文件
+# adobe 临时文件
