@@ -34,9 +34,10 @@ let data: Ref<Array<{
 
 const formData = {
   info: ref(),
-  imageData: ref({show: 0, groupId: 0, index: 0, url: "", degree: 0, doorType: false}),
-  mainEntrance: function (exportType: string) {
+  imageData: ref({show: 0, groupId: 0, index: 0, url: "", degree: 0, doorType: false, doorSelect: 0}),
+  mainEntrance: function (exportType: string, doorSelect: number) {
     formData.imageData.value.show = 1;
+    formData.imageData.value.doorSelect = doorSelect;
     data.value = [
       {group: "其他", color: "white", item: []}, // 0
       {group: "挨着红房间", color: "#32CD32", item: []}, // 0
@@ -48,10 +49,14 @@ const formData = {
           data.value[item.doorMain.groupId - 1]?.item.push({url: item.id, ext: item.ext, doorStyle: "left", date: item.date, degree: item.doorMain.degree});
       }
   },
-  sideEntrance: function (exportType: string) {
+  sideEntrance: function (exportType: string, doorSelect: number) {
     formData.imageData.value.show = 1;
+    formData.imageData.value.doorSelect = doorSelect;
     data.value = [
-      {group: "组", color: "#163141", item: []}, // 0
+      {group: "一般", color: "white", item: []}, // 0
+      {group: "进门是红房", color: "#32CD32", item: []}, // 0
+      {group: "挨着楼梯或红房", color: "#00FFFF", item: []}, // 0
+      {group: "特殊", color: "yellow", item: []}, // 0
     ];
     if (jsonData.value != null)
       for (let item of jsonData.value) {
@@ -117,27 +122,27 @@ onMounted(() => {
     <div class="sort" style="background-color: #001E36;" v-if="!formData.imageData.value.doorType">
       <div class="sortTag">正门：根据正门和出口关系</div>
       <div class="mainDoor sortButton">
-        <a href="javascript:void(0)" class="sortTitle select" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }" @click="formData.mainEntrance('1up')">&#xe66f;</a>
-        <a href="javascript:void(0)" class="sortTitle select" @click="formData.mainEntrance('1left')" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe66e;</a>
-        <a href="javascript:void(0)" class="sortTitle select" @click="formData.mainEntrance('1right')" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe66d;</a>
-        <a href="javascript:void(0)" class="sortTitle select" @click="formData.mainEntrance('2horizontal')" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe66c;</a>
-        <a href="javascript:void(0)" class="sortTitle select" @click="formData.mainEntrance('2left_up')" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe66a;</a>
-        <a href="javascript:void(0)" class="sortTitle select" @click="formData.mainEntrance('2right_up')" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe66b;</a>
-        <a href="javascript:void(0)" class="sortTitle select" @click="formData.mainEntrance('3down')" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe669;</a>
+        <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.doorSelect==101}" @click="formData.mainEntrance('1up',101)" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe66f;</a>
+        <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.doorSelect==102}" @click="formData.mainEntrance('1left',102)" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe66e;</a>
+        <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.doorSelect==103}" @click="formData.mainEntrance('1right',103)" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe66d;</a>
+        <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.doorSelect==104}" @click="formData.mainEntrance('2horizontal',104)" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe66c;</a>
+        <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.doorSelect==105}" @click="formData.mainEntrance('2left_up',105)" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe66a;</a>
+        <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.doorSelect==106}" @click="formData.mainEntrance('2right_up',106)" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe66b;</a>
+        <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.doorSelect==107}" @click="formData.mainEntrance('3down',107)" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe669;</a>
       </div>
     </div>
     <div class="sort" style="background-color: #333;" v-if="formData.imageData.value.doorType">
       <div class="sortTag">侧门：根据侧门所在空间的形状</div>
       <div>
         <div class="sideDoor sortButton">
-          <a href="javascript:void(0)" class="sortTitle select" @click="formData.sideEntrance('square')" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe681;</a>
-          <a href="javascript:void(0)" class="sortTitle select" @click="formData.sideEntrance('horizontal')" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe682;</a>
-          <a href="javascript:void(0)" class="sortTitle select" @click="formData.sideEntrance('vertical')" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe683;</a>
-          <a href="javascript:void(0)" class="sortTitle select" @click="formData.sideEntrance('left_up')" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe685;</a>
-          <a href="javascript:void(0)" class="sortTitle select" @click="formData.sideEntrance('left_down')" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe687;</a>
-          <a href="javascript:void(0)" class="sortTitle select" @click="formData.sideEntrance('right_up')" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe684;</a>
-          <a href="javascript:void(0)" class="sortTitle select" @click="formData.sideEntrance('right_down')" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe686;</a>
-          <a href="javascript:void(0)" class="sortTitle select" @click="formData.sideEntrance('h_ladder')" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe689;</a>
+          <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.doorSelect==201}" @click="formData.sideEntrance('square',201)" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe681;</a>
+          <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.doorSelect==202}" @click="formData.sideEntrance('horizontal',202)" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe682;</a>
+          <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.doorSelect==203}" @click="formData.sideEntrance('vertical',203)" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe683;</a>
+          <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.doorSelect==204}" @click="formData.sideEntrance('left_up',204)" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe685;</a>
+          <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.doorSelect==205}" @click="formData.sideEntrance('left_down',205)" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe687;</a>
+          <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.doorSelect==206}" @click="formData.sideEntrance('right_up',206)" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe684;</a>
+          <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.doorSelect==207}" @click="formData.sideEntrance('right_down',207)" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe686;</a>
+          <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.doorSelect==208}" @click="formData.sideEntrance('h_ladder',208)" :style="{ transform:`rotate(${formData.imageData.value.degree}deg)` }">&#xe689;</a>
         </div>
       </div>
     </div>
@@ -173,6 +178,10 @@ body, #app {
   display: inline-block;
 }
 
+.egg .doorSelect {
+  background-color: #eee;
+}
+
 .egg .sort {
   margin: 0 0 3px 0;
   color: #f0f0f0;
@@ -185,7 +194,7 @@ body, #app {
   margin: 0 5px 0 0;
   text-decoration: none;
   font-family: party-0chem, sans-serif;
-  width: 50px;
+  width: 55px;
   padding: 0;
   border: none;
 }
@@ -196,7 +205,7 @@ body, #app {
 }
 
 .egg .sort .sideDoor a {
-  font-size: 50px;
+  font-size: 55px;
   color: #C19A6B;
 }
 
