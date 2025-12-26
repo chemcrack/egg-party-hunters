@@ -179,7 +179,8 @@ body, #app {
 }
 
 .egg .doorSelect {
-  text-shadow: 0 0 5px #fff, 0 0 10px red, 0 0 15px yellow;
+  color: white !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .egg .sort {
