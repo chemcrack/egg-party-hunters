@@ -179,7 +179,7 @@ body, #app {
 }
 
 .egg .doorSelect {
-  background-color: #eee;
+  text-shadow: 0 0 5px #fff, 0 0 10px red, 0 0 15px yellow;
 }
 
 .egg .sort {
