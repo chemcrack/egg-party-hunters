@@ -105,5 +105,17 @@
     {"date":"2025-12-20","ext":".webp","id":"057","doorMain":{"sort":"2right_up","degree": 0,"groupId":3},"doorSide": {"groupId":2,"sort":"right_down","degree": 90}},
     {"date":"2025-12-20","ext":".webp","id":"058","doorMain":{"sort":"3down","degree": -90,"groupId":2},"doorSide": {"groupId":3,"sort":"horizontal","degree": 0}},
     {"date":"2025-12-20","ext":".webp","id":"0590","doorMain":{"sort":"3down","degree": 0,"groupId":1},"doorSide": {"groupId":3,"sort":"horizontal","degree": 90}},
-    {"date":"2025-12-20","ext":".webp","id":"0600","doorMain":{"sort":"3down","degree": 0,"groupId":1},"doorSide": {"groupId":2,"sort":"right_down","degree": 0}}
+    {"date":"2025-12-20","ext":".webp","id":"0600","doorMain":{"sort":"3down","degree": 0,"groupId":1},"doorSide": {"groupId":2,"sort":"right_down","degree": 0}},
+
+    {"date":"2025-12-27","ext":".webp","id":"061","doorMain":{"sort":"2right_up","degree": 0,"groupId":2},"doorSide": {"groupId":2,"sort":"right_down","degree": -90}},
+    {"date":"2025-12-27","ext":".webp","id":"062","doorMain":{"sort":"3down","degree": 0,"groupId":2},"doorSide": {"groupId":2,"sort":"right_down","degree": 90}},
+    {"date":"2025-12-27","ext":".webp","id":"063","doorMain":{"sort":"2horizontal","degree": 0,"groupId":3},"doorSide": {"groupId":2,"sort":"square","degree": 0}},
+    {"date":"2025-12-27","ext":".webp","id":"064","doorMain":{"sort":"2left_up","degree": 0,"groupId":2},"doorSide": {"groupId":1,"sort":"horizontal","degree": 0}},
+    {"date":"2025-12-27","ext":".webp","id":"065","doorMain":{"sort":"3down","degree": 0,"groupId":1},"doorSide": {"groupId":1,"sort":"horizontal","degree": 90}},
+
+    {"date":"2025-12-27","ext":".webp","id":"066","doorMain":{"sort":"1right","degree": 0,"groupId":1},"doorSide": {"groupId":2,"sort":"right_down","degree": 90}},
+    {"date":"2025-12-27","ext":".webp","id":"067","doorMain":{"sort":"3down","degree": 0,"groupId":1},"doorSide": {"groupId":3,"sort":"horizontal","degree": 180}},
+    {"date":"2025-12-27","ext":".webp","id":"068","doorMain":{"sort":"2right_up","degree": 0,"groupId":3},"doorSide": {"groupId":3,"sort":"horizontal","degree": 180}},
+    {"date":"2025-12-27","ext":".webp","id":"069","doorMain":{"sort":"2left_up","degree": 0,"groupId":1},"doorSide": {"groupId":4,"sort":"h_ladder","degree": 0}},
+    {"date":"2025-12-27","ext":".webp","id":"070","doorMain":{"sort":"2horizontal","degree": 0,"groupId":1},"doorSide": {"groupId":1,"sort":"right_up","degree": 180}}
   ]}
