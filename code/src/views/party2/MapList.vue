@@ -150,7 +150,7 @@ onMounted(() => {
     <div v-for="(group,groupId) of data" v-if="formData.imageData.value.show>0">
       <div class="title" :style="{color:group.color}">{{ groupId + 1 }}. {{ group.group }}</div>
       <ul>
-        <li v-for="(item,index) of group.item"
+        <li class="itemSelect" v-for="(item,index) of group.item"
             :style="{borderColor:group.color,backgroundImage:`url(${urlImage.thumbnail+item.url}.webp)`,backgroundSize:`200%`,backgroundPosition:`${item.doorStyle} center`,transform:`rotate(${formData.imageData.value.degree}deg)`}"
             @click="formData.imageClick(groupId,index)">
           <span class="path">{{ item.url }}</span>
@@ -272,10 +272,20 @@ body, #app {
   background-repeat: no-repeat;
   color: #eee;
   cursor: pointer;
+  top: 0;
+  transition: transform 0.3s ease, top 0.3s ease;
+  position: relative;
+  border-radius: 0.5em;
+}
+
+.egg .itemSelect:hover {
+  top: -0.5em;
+  z-index: 99;
 }
 
 .egg li span {
-  background-color: #2c2c36;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0.2em 0 0 0.2em;
 }
 
 .autoHide {
