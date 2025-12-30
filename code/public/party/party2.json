@@ -32,9 +32,13 @@
       {"t": "text","v": "（程序开发）零化学\n（产品设计） ᵎ(•̀㉨•́)و ̑̑ 加油\n（地图制作）葡萄浓缩浆"}
     ]}]
   },
-  "setting":{ "urlThumbnail": "https://party.0chem.com/party/thumbnail/",
-  "urlImage": "https://party.0chem.com/party/images/"
-},
+  "setting": {
+    "groupMain": [{"title": "一般","color": "#aaaaaa"},{"title": "挨着红房间","color": "#32CD32"},{"title": "特殊","color": "#00FFFF"}],
+    "groupSide": [{"title": "一般","color": "#aaaaaa"},{"title": "进门是红房","color": "#32CD32"},{"title": "挨着楼梯或红房","color": "#00FFFF"},{"title": "特殊","color": "yellow"}],
+    "urlWebLink":"https://party.0chem.com/?id=",
+    "urlThumbnail": "https://party.0chem.com/party/thumbnail/T",
+    "urlImage": "https://party.0chem.com/party/images/A"
+  },
   "data":[{"date":"2025-12-20","ext":".webp","id":"001", "doorMain":{"sort":"2horizontal","degree": 90,"groupId":1},"doorSide": {"groupId":1,"sort":"vertical","degree": 180}},
   {"date":"2025-12-20","ext":".webp","id":"002","doorMain":{"sort":"2left_up","degree": -90,"groupId":1},"doorSide": {"groupId":2,"sort":"left_up","degree": 180}},
     {"date":"2025-12-20","ext":".webp","id":"003","doorMain":{"sort":"3down","degree": 180,"groupId":2},"doorSide": {"groupId":3,"sort":"vertical","degree": 90}},

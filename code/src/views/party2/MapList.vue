@@ -12,7 +12,7 @@ const urlBase = "/party/";
 
 const urlImage = {image: urlBase + "images/A", thumbnail: urlBase + "thumbnail/T", link: "https://party.0chem.com/?id="};
 
-const res = await fetch(urlBase + 'party.json');
+const res = await fetch(urlBase + 'party2.json');
 const v = await res.json();
 const jsonData = ref<Array<rowData> | null>(null);
 const imageView = ref<InstanceType<typeof mapView>>();
