@@ -107,10 +107,10 @@ onMounted(() => {
       <div class="mainDoor sortButton">
         <div class="autoHide">门的方向</div>
         <div style="display: inline-flex;margin-right: 0.8em;">
-          <a href="javascript:void(0)" class="sortTitle select" @click="formData.selectDoor(0)">&#xe65a;</a>
-          <a href="javascript:void(0)" class="sortTitle select" @click="formData.selectDoor(180)">&#xe659;</a>
-          <a href="javascript:void(0)" class="sortTitle select" @click="formData.selectDoor(90)">&#xe65b;</a>
-          <a href="javascript:void(0)" class="sortTitle select" @click="formData.selectDoor(-90)">&#xe65c;</a>
+          <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.degree==0}" @click="formData.selectDoor(0)">&#xe65a;</a>
+          <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.degree==180}" @click="formData.selectDoor(180)">&#xe659;</a>
+          <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.degree==90}" @click="formData.selectDoor(90)">&#xe65b;</a>
+          <a href="javascript:void(0)" class="sortTitle select" :class="{doorSelect:formData.imageData.value.degree==-90}" @click="formData.selectDoor(-90)">&#xe65c;</a>
         </div>
         <div class="autoHide">那个门</div>
         <div style="display: inline-flex">
