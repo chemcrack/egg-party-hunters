@@ -18,13 +18,14 @@ const jsonData = ref<Array<rowData> | null>(null);
 const imageView = ref<InstanceType<typeof mapView>>();
 const helpView = ref<InstanceType<typeof Help>>();
 jsonData.value = v.data;
+// console.log(jsonData.value);
 
 // 获取路由实例
 // const router = useRouter();
 // 获取当前路由信息
 const route = useRoute();
 const id = route.query.id as string;
-console.log(id);
+// console.log(id);
 
 let data: Ref<Array<{
   group: string, color: string; item: Array<{

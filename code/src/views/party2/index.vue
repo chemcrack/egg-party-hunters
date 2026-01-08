@@ -30,6 +30,6 @@ onUnmounted(() => {
 
 <style>
 :root {
-  --0chem-party-help: "https://www.0chem.com/party/images/help.webp";
+  --0chem-party-help: url("/party/images/help.webp");
 }
 </style>
