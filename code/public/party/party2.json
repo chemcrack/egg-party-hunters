@@ -3,23 +3,23 @@
     "title":"现已收录全部困难地图",
     "content": [{"topic": "1、操作步骤","body": [
       {"t":"text","v":"第一步，选择门的方向"},
-      {"t": "style","v": "background-position: 0 -320px;"},
+      {"t": "style","v": "background-position: 0 -320px;background: url(\"https://party.0chem.com/party/images/help.webp\");"},
       {"t":"text","v":"第二步，选择门的分类"},
-      {"t": "style","v": "background-position: -400px 0;"},
+      {"t": "style","v": "background-position: -400px 0;background: url(\"https://party.0chem.com/party/images/help.webp\");"},
       {"t":"text","v":"最后，打开对应的地图就可以了。"}
     ]},{"topic": "2、正门分类","body": [
       {"t":"text","v":"由于正门空间都是一个小方块，分类是基于大门与出口位置关系进行分类。\n例如：大门在右，下方有一个出口。"},
-      {"t": "style","v": "background-position: 0 0;"},
+      {"t": "style","v": "background-position: 0 0;background: url(\"https://party.0chem.com/party/images/help.webp\");"},
       {"t": "text","v": "例如：在正门空间中，大门在左，右和下两个出口"},
-      {"t": "style","v": "background-position: 0 -80px;"},
+      {"t": "style","v": "background-position: 0 -80px;background: url(\"https://party.0chem.com/party/images/help.webp\");"},
       {"t": "text","v": ""},
       {"t": "style","v": ""},
       {"t": "image","v": ""}
     ]},{"topic": "3、侧门分类","body": [
       {"t": "text","v": "侧门所在空间形状变化，进行分类的，注意是否含有楼梯。\n例如：侧门的大门所在空间是横着的"},
-      {"t": "style","v": "background-position: 0 -160px;"},
+      {"t": "style","v": "background-position: 0 -160px;background: url(\"https://party.0chem.com/party/images/help.webp\");"},
       {"t": "text","v": "例如：侧门的大门所在空间是竖着的，且含有楼梯"},
-      {"t": "style","v": "background-position: 0 -240px;"}
+      {"t": "style","v": "background-position: 0 -240px;background: url(\"https://party.0chem.com/party/images/help.webp\");"}
     ]},{"topic": "4、流量","body": [
       {"t": "text","v": "如果您使用的是手机流量，整个程序只占用小于 6MB 流量，就可以使用全部功能。"}
     ]},{"topic": "免责声明：","body": [

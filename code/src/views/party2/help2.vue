@@ -113,7 +113,7 @@ defineExpose({
 .egg .help .img1 {
   height: 80px;
   width: 400px;
-  background-image: var(--0chem-party-help);
+  //background-image: var(--0chem-party-help);
   margin: 5px 0;
   display: inline-block;
 }
