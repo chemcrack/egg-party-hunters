@@ -1,0 +1,125 @@
+{
+  "help": {
+    "title":"现已收录全部困难地图",
+    "content": [{"topic": "1、操作步骤","body": [
+      {"t":"text","v":"第一步，选择门的方向"},
+      {"t": "style","v": "background-position: 0 -320px;"},
+      {"t":"text","v":"第二步，选择门的分类"},
+      {"t": "style","v": "background-position: -400px 0;"},
+      {"t":"text","v":"最后，打开对应的地图就可以了。"}
+    ]},{"topic": "2、正门分类","body": [
+      {"t":"text","v":"由于正门空间都是一个小方块，分类是基于大门与出口位置关系进行分类。\n例如：大门在右，下方有一个出口。"},
+      {"t": "style","v": "background-position: 0 0;"},
+      {"t": "text","v": "例如：在正门空间中，大门在左，右和下两个出口"},
+      {"t": "style","v": "background-position: 0 -80px;"},
+      {"t": "text","v": ""},
+      {"t": "style","v": ""},
+      {"t": "image","v": ""}
+    ]},{"topic": "3、侧门分类","body": [
+      {"t": "text","v": "侧门所在空间形状变化，进行分类的，注意是否含有楼梯。\n例如：侧门的大门所在空间是横着的"},
+      {"t": "style","v": "background-position: 0 -160px;"},
+      {"t": "text","v": "例如：侧门的大门所在空间是竖着的，且含有楼梯"},
+      {"t": "style","v": "background-position: 0 -240px;"}
+    ]},{"topic": "4、流量","body": [
+      {"t": "text","v": "如果您使用的是手机流量，整个程序只占用小于 6MB 流量，就可以使用全部功能。"}
+    ]},{"topic": "免责声明：","body": [
+        {"t": "text","v": "“蛋仔派对”“惊魂寻宝队”的困难模式真的太难了，新手入门更难，为了增加愉快感而推出的。"},
+      {"t": "text","v": "本网站所有图片都是来源于蛋仔派对游戏进行的二次加工，请根据网易官方规定进行使用。"}
+    ]},{"topic": "更新","body": [
+      {"t": "text","v": "（2025年12月24日）\nweb版添加分组功能\n添加地图分享功能\n自动旋转地图与实际方向匹配"},
+      {"t": "text","v": "（2025年12月18日）\n正式推出小程序版"}
+    ]},{"topic": "作者","body": [
+      {"t": "text","v": "（程序开发）零化学\n（产品设计） ᵎ(•̀㉨•́)و ̑̑ 加油\n（地图制作）葡萄浓缩浆"}
+    ]}]
+  },
+  "setting": {
+    "groupMain": [{"title": "一般","color": "#aaaaaa"},{"title": "挨着红房间","color": "#32CD32"},{"title": "特殊","color": "#00FFFF"}],
+    "groupSide": [{"title": "一般","color": "#aaaaaa"},{"title": "进门是红房","color": "#32CD32"},{"title": "挨着楼梯或红房","color": "#00FFFF"},{"title": "特殊","color": "yellow"}],
+    "urlWebLink":"https://party.0chem.com/?id=",
+    "urlThumbnail": "https://party.0chem.com/party/thumbnail/T",
+    "urlImage": "https://party.0chem.com/party/images/A"
+  },
+  "data":[{"date":"2025-12-20","ext":".webp","id":"001", "doorMain":{"sort":"2horizontal","degree": 90,"groupId":1},"doorSide": {"groupId":1,"sort":"vertical","degree": 180}},
+  {"date":"2025-12-20","ext":".webp","id":"002","doorMain":{"sort":"2left_up","degree": -90,"groupId":1},"doorSide": {"groupId":2,"sort":"left_up","degree": 180}},
+    {"date":"2025-12-20","ext":".webp","id":"003","doorMain":{"sort":"3down","degree": 180,"groupId":2},"doorSide": {"groupId":3,"sort":"vertical","degree": 90}},
+    {"date":"2025-12-20","ext":".webp","id":"004","doorMain":{"sort":"3down","degree": 0,"groupId":2},"doorSide": {"groupId":2,"sort":"left_down","degree": 0}},
+  {"date":"2025-12-20","ext":".webp","id":"005","doorMain":{"sort":"2left_up","degree": -90,"groupId":3},"doorSide": {"groupId":4,"sort":"horizontal","degree": 180}},
+
+  {"date":"2025-12-20","ext":".webp","id":"006","doorMain":{"sort":"1left","degree": -90,"groupId":2},"doorSide": {"groupId":2,"sort":"square","degree": 180}},
+  {"date":"2025-12-20","ext":".webp","id":"007","doorMain":{"sort":"2left_up","degree": 0,"groupId":2},"doorSide": {"groupId":3,"sort":"right_down","degree": -90}},
+  {"date":"2025-12-20","ext":".webp","id":"008","doorMain":{"sort":"1up","degree": 90,"groupId":2},"doorSide": {"groupId":2,"sort":"left_up","degree": -90}},
+  {"date":"2025-12-20","ext":".webp","id":"009","doorMain":{"sort":"2horizontal","degree": 0,"groupId":2},"doorSide": {"groupId":1,"sort":"right_up","degree": 90}},
+  {"date":"2025-12-20","ext":".webp","id":"010","doorMain":{"sort":"1up","degree": 0,"groupId":3},"doorSide": {"groupId":4,"sort":"vertical","degree": 0}},
+
+  {"date":"2025-12-20","ext":".webp","id":"011","doorMain":{"sort":"1left","degree": -90,"groupId":1},"doorSide": {"groupId":4,"sort":"horizontal","degree": -90}},
+  {"date":"2025-12-20","ext":".webp","id":"012","doorMain":{"sort":"2left_up","degree": -90,"groupId":3},"doorSide": {"groupId":1,"sort":"h_ladder","degree": 90}},
+  {"date":"2025-12-20","ext":".webp","id":"013","doorMain":{"sort":"1right","degree": 90,"groupId":1},"doorSide": {"groupId":4,"sort":"vertical","degree": 90}},
+  {"date":"2025-12-20","ext":".webp","id":"014","doorMain":{"sort":"2left_up","degree": 90,"groupId":2},"doorSide": {"groupId":4,"sort":"h_ladder","degree": 180}},
+  {"date":"2025-12-20","ext":".webp","id":"015","doorMain":{"sort":"3down","degree": 0,"groupId":1},"doorSide": {"groupId":2,"sort":"right_down","degree": 0}},
+
+    {"date":"2025-12-20","ext":".webp","id":"016","doorMain":{"sort":"1left","degree": -90,"groupId":3},"doorSide": {"groupId":2,"sort":"left_down","degree": 180}},
+    {"date":"2025-12-20","ext":".webp","id":"017","doorMain":{"sort":"2horizontal","degree": 180,"groupId":1},"doorSide": {"groupId":1,"sort":"horizontal","degree": 90}},
+    {"date":"2025-12-20","ext":".webp","id":"018","doorMain":{"sort":"2left_up","degree": 0,"groupId":2},"doorSide": {"groupId":4,"sort":"vertical","degree": 0}},
+    {"date":"2025-12-20","ext":".webp","id":"019","doorMain":{"sort":"1up","degree": 0,"groupId":3},"doorSide": {"groupId":1,"sort":"vertical","degree": 0}},
+    {"date":"2025-12-20","ext":".webp","id":"020","doorMain":{"sort":"2right_up","degree": 0,"groupId":3},"doorSide": {"groupId":3,"sort":"left_up","degree": 0}},
+
+    {"date":"2025-12-20","ext":".webp","id":"021","doorMain":{"sort":"1left","degree": -90,"groupId":1},"doorSide": {"groupId":4,"sort":"h_ladder","degree": -90}},
+    {"date":"2025-12-20","ext":".webp","id":"022","doorMain":{"sort":"1left","degree": -90,"groupId":3},"doorSide": {"groupId":4,"sort":"h_ladder","degree": -90}},
+    {"date":"2025-12-20","ext":".webp","id":"023","doorMain":{"sort":"2right_up","degree": -90,"groupId":2},"doorSide": {"groupId":2,"sort":"right_down","degree": 0}},
+    {"date":"2025-12-20","ext":".webp","id":"024","doorMain":{"sort":"1left","degree": -90,"groupId":1},"doorSide": {"groupId":1,"sort":"horizontal","degree": -90}},
+    {"date":"2025-12-20","ext":".webp","id":"025","doorMain":{"sort":"2left_up","degree": -90,"groupId":3},"doorSide": {"groupId":1,"sort":"horizontal","degree": 90}},
+
+    {"date":"2025-12-20","ext":".webp","id":"026","doorMain":{"sort":"2horizontal","degree": 0,"groupId":3},"doorSide": {"groupId":1,"sort":"horizontal","degree": 90}},
+    {"date":"2025-12-20","ext":".webp","id":"027","doorMain":{"sort":"2right_up","degree": 90,"groupId":1},"doorSide": {"groupId":4,"sort":"h_ladder","degree": 90}},
+    {"date":"2025-12-20","ext":".webp","id":"028","doorMain":{"sort":"2horizontal","degree": 0,"groupId":2},"doorSide": {"groupId":4,"sort":"left_up","degree": 0}},
+    {"date":"2025-12-20","ext":".webp","id":"029","doorMain":{"sort":"1up","degree": 0,"groupId":2},"doorSide": {"groupId":2,"sort":"right_down","degree": 90}},
+    {"date":"2025-12-20","ext":".webp","id":"030","doorMain":{"sort":"1left","degree": -90,"groupId":1},"doorSide": {"groupId":2,"sort":"left_up","degree": -90}},
+
+    {"date":"2025-12-20","ext":".webp","id":"031","doorMain":{"sort":"2horizontal","degree": 0,"groupId":3},"doorSide": {"groupId":1,"sort":"h_ladder","degree": 90}},
+    {"date":"2025-12-20","ext":".webp","id":"032","doorMain":{"sort":"2right_up","degree": 90,"groupId":3},"doorSide": {"groupId":1,"sort":"h_ladder","degree": -90}},
+    {"date":"2025-12-20","ext":".webp","id":"033","doorMain":{"sort":"2right_up","degree": 0,"groupId":1},"doorSide": {"groupId":2,"sort":"left_up","degree": 180}},
+    {"date":"2025-12-20","ext":".webp","id":"034","doorMain":{"sort":"2left_up","degree": -90,"groupId":2},"doorSide": {"groupId":3,"sort":"h_ladder","degree": 90}},
+    {"date":"2025-12-20","ext":".webp","id":"035","doorMain":{"sort":"3down","degree": 0,"groupId":1},"doorSide": {"groupId":4,"sort":"h_ladder","degree": -90}},
+
+    {"date":"2025-12-20","ext":".webp","id":"036","doorMain":{"sort":"3down","degree": 0,"groupId":1},"doorSide": {"groupId":3,"sort":"h_ladder","degree": 90}},
+    {"date":"2025-12-20","ext":".webp","id":"037","doorMain":{"sort":"2horizontal","degree": 0,"groupId":1},"doorSide": {"groupId":1,"sort":"horizontal","degree": -90}},
+    {"date":"2025-12-20","ext":".webp","id":"038","doorMain":{"sort":"3down","degree": 0,"groupId":1},"doorSide": {"groupId":2,"sort":"left_up","degree": 0}},
+    {"date":"2025-12-20","ext":".webp","id":"039","doorMain":{"sort":"2right_up","degree": 90,"groupId":1},"doorSide": {"groupId":2,"sort":"left_up","degree": -90}},
+    {"date":"2025-12-20","ext":".webp","id":"040","doorMain":{"sort":"2left_up","degree": -90,"groupId":2},"doorSide": {"groupId":2,"sort":"left_up","degree": -90}},
+
+    {"date":"2025-12-20","ext":".webp","id":"041","doorMain":{"sort":"2left_up","degree": -90,"groupId":1},"doorSide": {"groupId":2,"sort":"left_up","degree": -90}},
+    {"date":"2025-12-20","ext":".webp","id":"0420","doorMain":{"sort":"3down","degree": 0,"groupId":2},"doorSide": {"groupId":3,"sort":"horizontal","degree": 90}},
+    {"date":"2025-12-20","ext":".webp","id":"043","doorMain":{"sort":"1left","degree": -90,"groupId":2},"doorSide": {"groupId":4,"sort":"left_up","degree": 0}},
+    {"date":"2025-12-20","ext":".webp","id":"044","doorMain":{"sort":"1up","degree": 0,"groupId":2},"doorSide": {"groupId":4,"sort":"square","degree": -90}},
+    {"date":"2025-12-20","ext":".webp","id":"045","doorMain":{"sort":"1up","degree": 0,"groupId":1},"doorSide": {"groupId":3,"sort":"horizontal","degree": 90}},
+
+    {"date":"2025-12-20","ext":".webp","id":"046","doorMain":{"sort":"1up","degree": -90,"groupId":1},"doorSide": {"groupId":4,"sort":"h_ladder","degree": 90}},
+    {"date":"2025-12-20","ext":".webp","id":"047","doorMain":{"sort":"1right","degree": 90,"groupId":2},"doorSide": {"groupId":2,"sort":"square","degree": 180}},
+    {"date":"2025-12-20","ext":".webp","id":"048","doorMain":{"sort":"1left","degree": 0,"groupId":2},"doorSide": {"groupId":3,"sort":"right_down","degree": 0}},
+    {"date":"2025-12-20","ext":".webp","id":"049","doorMain":{"sort":"2horizontal","degree": 0,"groupId":2},"doorSide": {"groupId":2,"sort":"left_up","degree": -90}},
+    {"date":"2025-12-20","ext":".webp","id":"050","doorMain":{"sort":"2left_up","degree": -90,"groupId":1},"doorSide": {"groupId":3,"sort":"left_up","degree": 0}},
+
+    {"date":"2025-12-20","ext":".webp","id":"051","doorMain":{"sort":"2right_up","degree": 0,"groupId":3},"doorSide": {"groupId":1,"sort":"horizontal","degree": 180}},
+    {"date":"2025-12-20","ext":".webp","id":"052","doorMain":{"sort":"2left_up","degree": 0,"groupId":1},"doorSide": {"groupId":2,"sort":"square","degree": 90}},
+    {"date":"2025-12-20","ext":".webp","id":"053","doorMain":{"sort":"2left_up","degree": 0,"groupId":1},"doorSide": {"groupId":2,"sort":"left_up","degree": 180}},
+    {"date":"2025-12-20","ext":".webp","id":"054","doorMain":{"sort":"2right_up","degree": 0,"groupId":1},"doorSide": {"groupId":1,"sort":"horizontal","degree": -90}},
+    {"date":"2025-12-20","ext":".webp","id":"055","doorMain":{"sort":"2left_up","degree": 0,"groupId":1},"doorSide": {"groupId":3,"sort":"right_down","degree": -90}},
+
+    {"date":"2025-12-20","ext":".webp","id":"056","doorMain":{"sort":"2left_up","degree": 0,"groupId":2},"doorSide": {"groupId":1,"sort":"h_ladder","degree": 180}},
+    {"date":"2025-12-20","ext":".webp","id":"057","doorMain":{"sort":"2right_up","degree": 0,"groupId":3},"doorSide": {"groupId":2,"sort":"right_down","degree": 90}},
+    {"date":"2025-12-20","ext":".webp","id":"058","doorMain":{"sort":"3down","degree": -90,"groupId":2},"doorSide": {"groupId":3,"sort":"horizontal","degree": 0}},
+    {"date":"2025-12-20","ext":".webp","id":"0590","doorMain":{"sort":"3down","degree": 0,"groupId":1},"doorSide": {"groupId":3,"sort":"horizontal","degree": 90}},
+    {"date":"2025-12-20","ext":".webp","id":"0600","doorMain":{"sort":"3down","degree": 0,"groupId":1},"doorSide": {"groupId":2,"sort":"right_down","degree": 0}},
+
+    {"date":"2025-12-27","ext":".webp","id":"061","doorMain":{"sort":"2right_up","degree": 0,"groupId":2},"doorSide": {"groupId":2,"sort":"right_down","degree": -90}},
+    {"date":"2025-12-27","ext":".webp","id":"062","doorMain":{"sort":"3down","degree": 0,"groupId":2},"doorSide": {"groupId":2,"sort":"right_down","degree": 90}},
+    {"date":"2025-12-27","ext":".webp","id":"063","doorMain":{"sort":"2horizontal","degree": 0,"groupId":3},"doorSide": {"groupId":2,"sort":"square","degree": 0}},
+    {"date":"2025-12-27","ext":".webp","id":"064","doorMain":{"sort":"2left_up","degree": 0,"groupId":2},"doorSide": {"groupId":1,"sort":"horizontal","degree": 0}},
+    {"date":"2025-12-27","ext":".webp","id":"065","doorMain":{"sort":"3down","degree": 0,"groupId":1},"doorSide": {"groupId":1,"sort":"horizontal","degree": 90}},
+
+    {"date":"2025-12-27","ext":".webp","id":"066","doorMain":{"sort":"1right","degree": 0,"groupId":1},"doorSide": {"groupId":2,"sort":"right_down","degree": 90}},
+    {"date":"2025-12-27","ext":".webp","id":"067","doorMain":{"sort":"3down","degree": 0,"groupId":1},"doorSide": {"groupId":3,"sort":"horizontal","degree": 180}},
+    {"date":"2025-12-27","ext":".webp","id":"068","doorMain":{"sort":"2right_up","degree": 0,"groupId":3},"doorSide": {"groupId":3,"sort":"horizontal","degree": 180}},
+    {"date":"2025-12-27","ext":".webp","id":"069","doorMain":{"sort":"2left_up","degree": 0,"groupId":1},"doorSide": {"groupId":4,"sort":"h_ladder","degree": 0}},
+    {"date":"2025-12-27","ext":".webp","id":"070","doorMain":{"sort":"2horizontal","degree": 0,"groupId":1},"doorSide": {"groupId":1,"sort":"right_up","degree": 180}}
+  ]}
